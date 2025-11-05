@@ -1,4 +1,3 @@
-// lib/core/navigation/app_router.dart
 import 'package:flutter/material.dart';
 
 import '../../Domain/Entities/repo.dart';
@@ -9,7 +8,6 @@ import '../../Presentation/Pages/username_page.dart';
 
 
 class AppRouter {
-  // ROUTES
   static const String splash = '/splash';
   static const String username = '/';
   static const String home = '/home';
