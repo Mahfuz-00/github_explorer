@@ -60,7 +60,6 @@ class RepoCard extends StatelessWidget {
                 const SizedBox(height: 12 + 2 * 21), 
 
               const SizedBox(height: 8),
-
               _buildLanguageRow(theme),
 
               Row(
