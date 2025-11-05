@@ -1,4 +1,3 @@
-// lib/common/widgets/filter_bar.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../Presentation/Bloc/Repos/repo_bloc.dart';
@@ -19,14 +18,12 @@ class FilterBar extends StatelessWidget {
               bottomRight: Radius.circular(16),
             ),
             boxShadow: [
-              // DEEP BOTTOM SHADOW
               BoxShadow(
                 color: Colors.black.withOpacity(0.18),
                 blurRadius: 20,
                 spreadRadius: 2,
-                offset: const Offset(0, 8), // Stronger downward push
+                offset: const Offset(0, 8),
               ),
-              // Subtle lift
               BoxShadow(
                 color: Colors.black.withOpacity(0.08),
                 blurRadius: 10,
@@ -116,7 +113,6 @@ class FilterBar extends StatelessWidget {
     );
   }
 
-  // FIXED: Pass context to get correct theme
   Icon _sortIcon(RepoSort sort, BuildContext context) {
     final color = Theme.of(context).colorScheme.primary;
 
