@@ -86,7 +86,6 @@ class _UsernamePageState extends State<UsernamePage> {
                     color: isDark ? Colors.white : Colors.black,
                   ),
                   const SizedBox(height: 32),
-
                   Text(
                     'Welcome to GitHub Explorer',
                     style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
