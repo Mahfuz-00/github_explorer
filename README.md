@@ -1,4 +1,4 @@
-# GitHub Explorer
+# 🧭 GitHub Explorer
 
 **A beautiful, fast, and modern GitHub repository browser built with Flutter & Clean Architecture.**
 
@@ -7,31 +7,31 @@
 
 ---
 
-## Features
+## ✨ Features
 
 | Feature | Description |
-|-------|-----------|
-| **User Search** | Enter any GitHub username to view profile & repos |
+|----------|-------------|
+| **User Search** | Enter any GitHub username to view profile & repositories |
 | **List/Grid View** | Toggle between list and grid layouts |
-| **Smart Sorting** | Sort by: Name (A-Z/Z-A), Date, Stars |
-| **Rich Repo Details** | Description, stats, language, dates, "Open in GitHub" |
-| **User Header** | Avatar, name, bio, stats (repos, followers, following) |
-| **Search History** | Last 10 usernames saved locally |
-| **Dark/Light Mode** | Full theme toggle support |
+| **Smart Sorting** | Sort by: Name (A–Z / Z–A), Date, Stars |
+| **Rich Repo Details** | View description, stats, language, dates, and open directly on GitHub |
+| **User Header** | Beautiful user header with avatar, name, bio, and stats (repos, followers, following) |
+| **Search History** | Last 10 usernames saved locally for quick access |
+| **Dark/Light Mode** | Seamless theme toggle support |
 | **No Black Flash** | Smooth white native splash on launch |
-| **Professional UI** | Material 3, responsive, accessible |
+| **Professional UI** | Built with Material 3 — responsive, modern, and accessible |
 
 ---
 
-## Screenshots
+## 🖼️ Screenshots
 
 | Home (Grid) | Repo Detail | Search History |
-|------------|-------------|----------------|
+|--------------|-------------|----------------|
 | ![Grid View](https://via.placeholder.com/300x600.png?text=Grid+View) | ![Detail](https://via.placeholder.com/300x600.png?text=Repo+Detail) | ![History](https://via.placeholder.com/300x600.png?text=Search+History) |
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 - **Framework**: Flutter (Dart)
 - **Architecture**: Clean Architecture
@@ -44,28 +44,18 @@
 
 ---
 
-## Project Structure
-lib/
-├── core/               # DI, navigation, services
-├── data/               # Models, repositories, API
-├── domain/             # Entities, use cases
-├── presentation/       # Pages, BLoC, widgets
-└── common/             # Shared widgets, helpers
-
----
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Flutter SDK (≥3.0.0)
-- Dart
-- Android Studio / VS Code
+- Flutter SDK ≥ 3.0.0  
+- Dart  
+- Android Studio / VS Code  
 
 ### Installation
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/Mahfuz-00/assignment_bloc.git
 cd assignment_bloc
 
