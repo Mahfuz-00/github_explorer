@@ -37,7 +37,6 @@ class _UsernamePageState extends State<UsernamePage> {
       return;
     }
 
-    // Save to history
     await SearchHistoryService.addUsername(username);
     if (mounted) {
       Navigator.pushNamed(context, AppRouter.home, arguments: username);
@@ -118,8 +117,6 @@ class _UsernamePageState extends State<UsernamePage> {
                     ),
                   ),
                   const SizedBox(height: 16),
-
-                  // SEARCH HISTORY
                   if (_searchHistory.isNotEmpty) ...[
                     Align(
                       alignment: Alignment.centerLeft,
@@ -152,7 +149,6 @@ class _UsernamePageState extends State<UsernamePage> {
                     const SizedBox(height: 16),
                   ],
 
-                  // Continue Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
