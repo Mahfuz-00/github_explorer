@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
 import '../../Common/Helper/date_formatter.dart';
 import '../../Common/Helper/language_color.dart';
 import '../../Domain/Entities/repo.dart';
