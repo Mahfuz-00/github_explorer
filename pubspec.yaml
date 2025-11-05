@@ -40,6 +40,8 @@ dependencies:
   url_launcher: ^6.3.0
   dartz:
   cached_network_image:
+  shared_preferences:
+  flutter_launcher_icons: ^0.14.4
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -61,6 +63,13 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "Assets/Images/github-logo.png"
+  min_sdk_android: 21
+
+
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -70,9 +79,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+     - Assets/Images/github-logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                               return const LinearProgressIndicator();
                             }
                             if (userState is UserLoaded) {
-                              return _buildUserHeader(userState.user, context);
+                              return _buildUserHeader(userState.user, context, themeState.isDark);
                             }
                             return const SizedBox.shrink();
                           },
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildUserHeader(User user, BuildContext context) {
+  Widget _buildUserHeader(User user, BuildContext context, bool isDark) {
     final theme = Theme.of(context);
 
     return Container(
@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // TOP: Avatar + Name + Login + Bio
+          // TOP ROW: Avatar + Info (NO THEME BUTTON HERE)
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -96,6 +96,7 @@ class HomePage extends StatelessWidget {
                       user.name,
                       style: theme.textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
+                        fontSize: 20,
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -123,13 +124,32 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          // BOTTOM: Stats in Row
+          // BOTTOM ROW: Stats + Theme Toggle
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               _buildStatChip(user.publicRepos, 'Repos', Icons.folder_open, theme),
               _buildStatChip(user.followers, 'Followers', Icons.people, theme),
               _buildStatChip(user.following, 'Following', Icons.person_add, theme),
+
+              // THEME TOGGLE — SAME ROW
+              Container(
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.primary.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: IconButton(
+                  icon: Icon(
+                    isDark ? Icons.light_mode : Icons.dark_mode,
+                    color: theme.colorScheme.primary,
+                    size: 22,
+                  ),
+                  tooltip: isDark ? 'Switch to Light' : 'Switch to Dark',
+                  onPressed: () {
+                    context.read<ThemeBloc>().add(ToggleTheme());
+                  },
+                ),
+              ),
             ],
           ),
         ],

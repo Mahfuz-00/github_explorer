@@ -7,9 +7,9 @@ import '../../Data/Sources/Remote/github_api.dart';
 import '../../Domain/Repositories/github_repository.dart';
 import '../../Domain/Usecases/get_user.dart';
 import '../../Domain/Usecases/get_user_repos.dart';
-import '../../Presenation/Bloc/Repos/repo_bloc.dart';
-import '../../Presenation/Bloc/Theme/theme_bloc.dart';
-import '../../Presenation/Bloc/User/user_bloc.dart';
+import '../../Presentation/Bloc/Repos/repo_bloc.dart';
+import '../../Presentation/Bloc/Theme/theme_bloc.dart';
+import '../../Presentation/Bloc/User/user_bloc.dart';
 
 final sl = GetIt.instance;
 

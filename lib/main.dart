@@ -4,7 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'Core/Config/Themes/app_theme.dart';
 import 'Core/DI/injection.dart';
 import 'Core/Navigations/app_router.dart';
-import 'Presenation/Bloc/Theme/theme_bloc.dart';
+import 'Presentation/Bloc/Theme/theme_bloc.dart';
+import 'Presentation/Pages/splashscreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
             darkTheme: AppTheme.dark,
             themeMode: state.isDark ? ThemeMode.dark : ThemeMode.light,
             onGenerateRoute: AppRouter.generateRoute,
-            initialRoute: AppRouter.username,
+            initialRoute: AppRouter.splash,
           );
         },
       ),

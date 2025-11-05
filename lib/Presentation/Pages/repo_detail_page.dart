@@ -1,4 +1,3 @@
-// lib/presentation/pages/repo_detail_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -72,15 +71,16 @@ class RepoDetailPage extends StatelessWidget {
                 _buildMetadataSection(theme),
                 const SizedBox(height: 32),
 
-                // Action Button
+                // Action Button — PASS CONTEXT
                 Center(
                   child: ElevatedButton.icon(
                     icon: const Icon(Icons.open_in_browser),
                     label: const Text('Open in GitHub'),
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     ),
-                    onPressed: () => _launchUrl(repo.htmlUrl),
+                    onPressed: () => _launchUrl(context, repo.htmlUrl), // PASS CONTEXT
                   ),
                 ),
               ],
@@ -154,10 +154,28 @@ class RepoDetailPage extends StatelessWidget {
     );
   }
 
-  Future<void> _launchUrl(String url) async {
+  // FIXED: Accept context
+  Future<void> _launchUrl(BuildContext context, String url) async {
     final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+
+    try {
+      final bool launched = await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      );
+
+      if (!launched) {
+        _showSnackBar(context, 'Could not open browser');
+      }
+    } catch (e) {
+      _showSnackBar(context, 'Error: $e');
     }
+  }
+
+  // Helper to avoid duplication
+  void _showSnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
   }
 }
