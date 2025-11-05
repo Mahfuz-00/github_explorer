@@ -2,7 +2,7 @@
 
 **A beautiful, fast, and modern GitHub repository browser built with Flutter & Clean Architecture.**
 
-![GitHub Explorer](https://via.placeholder.com/800x400.png?text=GitHub+Explorer+App+Preview)  
+![GitHub Explorer](https://github.com/user-attachments/assets/c611c1ac-8012-440a-9e8a-88ac0c1970ab)  
 *Explore GitHub users and their repositories with style.*
 
 ---
@@ -27,7 +27,7 @@
 
 | Home (Grid) | Repo Detail | Search History |
 |--------------|-------------|----------------|
-| ![Grid View](https://via.placeholder.com/300x600.png?text=Grid+View) | ![Detail](https://via.placeholder.com/300x600.png?text=Repo+Detail) | ![History](https://via.placeholder.com/300x600.png?text=Search+History) |
+| ![Grid View](https://github.com/user-attachments/assets/7990c5c3-037b-4a76-b77d-0a06c75b8e75) | ![Detail](https://github.com/user-attachments/assets/cf14af45-72be-4f8c-99d7-a95681009a50) | ![History](https://github.com/user-attachments/assets/4fa23827-3baf-4678-a6a2-b64289c69a7c)   |
 
 ---
 
