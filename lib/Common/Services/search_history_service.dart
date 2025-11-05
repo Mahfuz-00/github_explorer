@@ -14,7 +14,6 @@ class SearchHistoryService {
     if (history.length > _maxItems) {
       history.removeRange(_maxItems, history.length);
     }
-
     await prefs.setStringList(_key, history);
   }
 
