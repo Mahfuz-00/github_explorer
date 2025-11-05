@@ -56,8 +56,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mahfuz-00/assignment_bloc.git
-cd assignment_bloc
+git clone https://github.com/Mahfuz-00/github_explorer.git
+cd github_explorer
 
 # Get dependencies
 flutter pub get
