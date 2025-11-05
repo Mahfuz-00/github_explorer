@@ -1,4 +1,3 @@
-// lib/common/widgets/repo_card.dart
 import 'package:flutter/material.dart';
 import '../../Common/Helper/date_formatter.dart';
 import '../../Domain/Entities/repo.dart';
@@ -31,7 +30,6 @@ class RepoCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header
               Text(
                 repo.name,
                 style: theme.textTheme.titleMedium?.copyWith(
@@ -53,16 +51,14 @@ class RepoCard extends StatelessWidget {
                   ),
                 ),
 
-              // DESCRIPTION: Smart spacing
               if (repo.description != null && repo.description!.trim().isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 12),
                   child: _buildDescription(theme),
                 )
               else if (isGrid)
-                const SizedBox(height: 12 + 2 * 21), // Only in grid
+                const SizedBox(height: 12 + 2 * 21), 
 
-              // Language + Stats
               const SizedBox(height: 8),
 
               _buildLanguageRow(theme),
