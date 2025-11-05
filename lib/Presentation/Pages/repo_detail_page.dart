@@ -34,7 +34,6 @@ class RepoDetailPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
                 Row(
                   children: [
                     CircleAvatar(
@@ -55,7 +54,6 @@ class RepoDetailPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
 
-                // Description
                 if (repo.description != null && repo.description!.isNotEmpty) ...[
                   Text('Description', style: theme.textTheme.titleMedium),
                   const SizedBox(height: 8),
@@ -63,15 +61,12 @@ class RepoDetailPage extends StatelessWidget {
                   const SizedBox(height: 24),
                 ],
 
-                // Stats Grid
                 _buildStatsGrid(theme),
                 const SizedBox(height: 24),
 
-                // Metadata
                 _buildMetadataSection(theme),
                 const SizedBox(height: 32),
 
-                // Action Button — PASS CONTEXT
                 Center(
                   child: ElevatedButton.icon(
                     icon: const Icon(Icons.open_in_browser),
@@ -80,7 +75,7 @@ class RepoDetailPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     ),
-                    onPressed: () => _launchUrl(context, repo.htmlUrl), // PASS CONTEXT
+                    onPressed: () => _launchUrl(context, repo.htmlUrl), 
                   ),
                 ),
               ],
@@ -154,7 +149,6 @@ class RepoDetailPage extends StatelessWidget {
     );
   }
 
-  // FIXED: Accept context
   Future<void> _launchUrl(BuildContext context, String url) async {
     final uri = Uri.parse(url);
 
@@ -172,7 +166,6 @@ class RepoDetailPage extends StatelessWidget {
     }
   }
 
-  // Helper to avoid duplication
   void _showSnackBar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(message)),
