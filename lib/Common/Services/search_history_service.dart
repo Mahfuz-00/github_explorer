@@ -18,13 +18,11 @@ class SearchHistoryService {
     await prefs.setStringList(_key, history);
   }
 
-  // Get history
   static Future<List<String>> getHistory() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getStringList(_key) ?? [];
   }
 
-  // Clear all
   static Future<void> clear() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_key);
