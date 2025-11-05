@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
 import '../../Common/Widgets/filter_bar.dart';
 import '../../Common/Widgets/repo_card.dart';
 import '../../Core/DI/injection.dart';
