@@ -15,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      // CORRECT ROUTE
       Navigator.of(context).pushReplacementNamed(AppRouter.username);
     });
   }
@@ -28,7 +27,6 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // GitHub Logo
             Image.asset(
               'Assets/Images/github-logo.png',
               width: 120,
@@ -38,7 +36,6 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 60),
 
-            // App Name
             const Text(
               'GitHub Explorer',
               style: TextStyle(
