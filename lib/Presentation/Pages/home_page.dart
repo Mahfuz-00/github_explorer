@@ -79,7 +79,6 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // TOP ROW: Avatar + Info (NO THEME BUTTON HERE)
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -124,7 +123,6 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          // BOTTOM ROW: Stats + Theme Toggle
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -132,7 +130,6 @@ class HomePage extends StatelessWidget {
               _buildStatChip(user.followers, 'Followers', Icons.people, theme),
               _buildStatChip(user.following, 'Following', Icons.person_add, theme),
 
-              // THEME TOGGLE — SAME ROW
               Container(
                 decoration: BoxDecoration(
                   color: theme.colorScheme.primary.withOpacity(0.1),
@@ -157,7 +154,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-// NEW: Stat Chip with Icon
   Widget _buildStatChip(int count, String label, IconData icon, ThemeData theme) {
     return Column(
       children: [
