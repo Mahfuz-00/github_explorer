@@ -18,7 +18,6 @@
 | **User Header** | Beautiful user header with avatar, name, bio, and stats (repos, followers, following) |
 | **Search History** | Last 10 usernames saved locally for quick access |
 | **Dark/Light Mode** | Seamless theme toggle support |
-| **No Black Flash** | Smooth white native splash on launch |
 | **Professional UI** | Built with Material 3 — responsive, modern, and accessible |
 
 ---
