@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import '../../Core/Config/Constants/constants.dart';
 import '../../Core/Navigations/app_router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -36,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(height: 60),
 
             const Text(
-              'GitHub Explorer',
+              AppConstants.appName,
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,

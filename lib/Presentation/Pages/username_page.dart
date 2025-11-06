@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../Common/Services/search_history_service.dart';
+import '../../Core/Config/Constants/constants.dart';
 import '../../Core/Navigations/app_router.dart';
 import '../Bloc/Theme/theme_bloc.dart';
 
@@ -65,7 +66,7 @@ class _UsernamePageState extends State<UsernamePage> {
           backgroundColor: theme.colorScheme.surface,
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: const Text('GitHub Explorer'),
+            title: const Text(AppConstants.appName),
             elevation: 0,
             actions: [
               IconButton(
