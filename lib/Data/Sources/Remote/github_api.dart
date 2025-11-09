@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 
+import '../../../Core/Config/Constants/api_constants.dart';
 import '../../Models/repo_model.dart';
 import '../../Models/user_model.dart';
 
@@ -10,13 +11,13 @@ class GitHubApi {
   GitHubApi(this.dio);
 
   Future<UserModel> fetchUser(String username) async {
-    final response = await dio.get('/users/$username');
+    final response = await dio.get(ApiConstants.user(username));
     print('Response Data User: ${response.data}');
     return UserModel.fromJson(response.data);
   }
 
   Future<List<RepoModel>> fetchUserRepos(String username) async {
-    final response = await dio.get('/users/$username/repos');
+    final response = await dio.get(ApiConstants.repos(username));
     print('Response Data Repo (RAW): ${response.data}');
 
     final List<dynamic> data = response.data;

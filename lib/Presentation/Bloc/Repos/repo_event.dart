@@ -21,3 +21,18 @@ class ChangeSort extends ReposEvent {
 }
 
 class ToggleView extends ReposEvent {}
+
+class ExpandSearch extends ReposEvent {
+  const ExpandSearch();
+}
+
+class CollapseSearch extends ReposEvent {
+  const CollapseSearch();
+}
+
+class SearchRepos extends ReposEvent {
+  final String query;
+  const SearchRepos(this.query);
+  @override
+  List<Object?> get props => [query];
+}

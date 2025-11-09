@@ -9,6 +9,8 @@ class ReposState extends Equatable {
   final bool isGrid;
   final bool isLoading;
   final String? error;
+  final bool isSearchExpanded;
+  final String searchQuery;
 
   const ReposState({
     required this.repos,
@@ -17,6 +19,8 @@ class ReposState extends Equatable {
     required this.isGrid,
     required this.isLoading,
     this.error,
+    this.isSearchExpanded = false,
+    this.searchQuery = '',
   });
 
   factory ReposState.initial() => ReposState(
@@ -34,6 +38,8 @@ class ReposState extends Equatable {
     bool? isGrid,
     bool? isLoading,
     String? error,
+    bool? isSearchExpanded,
+    String? searchQuery,
     bool clearError = false,
   }) {
     return ReposState(
@@ -43,9 +49,11 @@ class ReposState extends Equatable {
       isGrid: isGrid ?? this.isGrid,
       isLoading: isLoading ?? this.isLoading,
       error: clearError ? null : (error ?? this.error),
+      isSearchExpanded: isSearchExpanded ?? this.isSearchExpanded,
+      searchQuery: searchQuery ?? this.searchQuery,
     );
   }
 
   @override
-  List<Object?> get props => [repos, filtered, sort, isGrid, isLoading, error];
+  List<Object?> get props => [repos, filtered, sort, isGrid, isLoading, error, isSearchExpanded, searchQuery];
 }
