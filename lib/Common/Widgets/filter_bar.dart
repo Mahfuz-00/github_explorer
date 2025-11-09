@@ -105,7 +105,7 @@ class FilterBar extends StatelessWidget {
                 context.read<ReposBloc>().add(SearchRepos(query.trim().toLowerCase()));
               },
               decoration: const InputDecoration(
-                hintText: 'Search...',
+                hintText: '  Search...',
                 border: InputBorder.none,
                 isDense: true,
                 contentPadding: EdgeInsets.zero,
